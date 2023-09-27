@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Worth your weight in gold</title>
+        <link rel="stylesheet" href="{% static 'gold/style.css' %}">
+    </head>
+    <body>
+        <a href="sdp">SDP</a>
+        <div class="converter box">
+            <h2 id="page_title">Worth your weight in gold</h2>
+            <p>Welcome to Worth Your Weight In Gold. All you need to do is put your weight into the input, and we will tell you how much the same amount of gold is currently worth</p>
+            <p>You can choose to input any of the provided units</p>
+            <hr>
+            <input type="number" name="weight" id="weight">
+            <select id="selected_unit">
+                {% if units %}
+                    {% for unit in units %}
+                    <option>{{ unit }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+            <button onclick="convert()">Convert</button>
+            <hr>
+            <h4>The current price of gold is <span id="gold_price">Please wait</span></h4>
+        </div>
+        <div class="conversions box">
+            <h3>Conversions</h3>
+        </div>
+        <script src="{% static 'gold/script.js' %}"></script>
+
+    </body>
+</html>

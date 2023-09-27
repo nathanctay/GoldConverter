@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <title>Software Development Plan</title>
+        <link rel="stylesheet" href="{% static 'calc/style.css' %}">
+    </head>
+    <body>
+        <h1 id="blog_name">Point Grey Blog</h1>
+        
+        <div class="phases">
+            <div id="phase0" class="phase">
+                <h1>Phase 0: Requirements Specification</h1>
+                <p>Two web apps. One to convert units. One for the user interface to input weight</p>
+                <p>Should access nasdaq API for price of gold</p>
+                <h4>Using googles conversion factors</h4>
+            </div>
+            <div id="phase1" class="phase">
+                <h1>Phase 1: Design</h1>
+
+                <h3>Models</h3>
+                <p>Unit</p>
+                <ul>
+                    <li>name</li>
+                    <li>ConversionFactor</li>
+                </ul>
+                <h3>html pages</h3>
+                <h4>index</h4>
+                <p>Form for user input</p>
+                <p>Get from gold api</p>
+                
+            </div>
+            <div id="phase2" class="phase">
+                <h1>Phase 2: Implementation</h1>
+                <p></p>
+            </div>
+            <div id="phase3" class="phase">
+                <h1>Phase 3: Testing & Debugging</h1>
+                <ul>
+                   <li>converter API</li>
+                   <ul>
+                        <li> t_ozs to t_oz = 12.0</li>
+                        <li> t_ozs to T = 0.0004114379757251595</li>
+                        <li> t_ozs to g = 373.249948570253</li>
+                        <li> t_ozs to kg = 0.373249948570253</li>
+                        <li> t_ozs to lb = 0.8228759514503188</li>
+                        <li> t_ozs to oz = 13.1660152232051</li>
+                        <li> Ts to t_oz = 349992.0</li>
+                        <li> Ts to T = 12.0</li>
+                        <li> Ts to g = 10886208.0</li>
+                        <li> Ts to kg = 10886.207999999999</li>
+                        <li> Ts to lb = 24000.0</li>
+                        <li> Ts to oz = 384000.0</li>
+                        <li> gs to t_oz = 0.38580045503448035</li>
+                        <li> gs to T = 1.3227746521102665e-05</li>
+                        <li> gs to g = 12.0</li>
+                        <li> gs to kg = 0.012</li>
+                        <li> gs to lb = 0.026455493042205333</li>
+                        <li> gs to oz = 0.42328788867528533</li>
+                        <li> kgs to t_oz = 385.8004550344803</li>
+                        <li> kgs to T = 0.013227746521102667</li>
+                        <li> kgs to g = 12000.0</li>
+                        <li> kgs to kg = 12.0</li>
+                        <li> kgs to lb = 26.45549304220533</li>
+                        <li> kgs to oz = 423.2878886752853</li>
+                        <li> lbs to t_oz = 174.996</li>
+                        <li> lbs to T = 0.006</li>
+                        <li> lbs to g = 5443.103999999999</li>
+                        <li> lbs to kg = 5.443104</li>
+                        <li> lbs to lb = 12.0</li>
+                        <li> lbs to oz = 192.0</li>
+                        <li> ozs to t_oz = 10.93725</li>
+                        <li> ozs to T = 0.000375</li>
+                        <li> ozs to g = 340.19399999999996</li>
+                        <li> ozs to kg = 0.340194</li>
+                        <li> ozs to lb = 0.75</li>
+                        <li> ozs to oz = 12.0</li>
+                   </ul>
+                   <li>gold page</li>
+                   <ul>
+                        <li>Error with fetching gold price shows error where price would be</li>
+                        <li>Error with converter API shows error and timestamp in conversions div</li>
+                   </ul>
+                </ul> 
+            </div>
+            <div id="phase4" class="phase">
+                <h1>Phase 4: Deployment</h1>
+            </div>
+            <div id="phase5" class="phase">
+                <h1>Phase 5: Maintenance</h1>
+                <p>Should be maintainable. Shouldn't break</p>
+            </div>
+        </div>  
+    </body>
+</html>
